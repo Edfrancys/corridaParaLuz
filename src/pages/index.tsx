@@ -1,18 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
 
-const Display = styled.div`
-    display: flex;
+import Sidebar from '../components/Sidebar/Sidebar';
 
-    height: 100vh;
-    background: #fafafa;
-`;
 
 const Home = (): JSX.Element => {
-	return (
-		<Display>
-			<h1>Home Corrida</h1>
-		</Display>
+	return (		
+		<Sidebar />		
 	);
 };
 
