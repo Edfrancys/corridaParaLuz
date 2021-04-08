@@ -1,0 +1,11 @@
+{
+  "name": "corrida-para-luz",
+  "version": "1.0.0",
+  "description": "Site insitucional e informativo\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D,\u001b[3~\u001b[C\u001b[\u001b[C\u001b[C\u001b[C\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C informativo e para inscrição.\u001b[D dos corredores.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
