@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
         left: 0;
         bottom: 0;
         width: 300px;
+        z-index: 100;
     }
 
     .background {
