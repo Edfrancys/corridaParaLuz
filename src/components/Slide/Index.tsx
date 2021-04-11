@@ -34,9 +34,6 @@ const swipePower = (offset: number, velocity: number) => {
 
 const Slide = (): JSX.Element => {
 
-	const imgRef = useRef(null);
-	const { height } = useDimensions( imgRef );	
-
 	const [ [page, direction], setPage ] = useState([0,0]);
 	const imageIndex = wrap( 0, images.length, page );
 	
@@ -46,7 +43,7 @@ const Slide = (): JSX.Element => {
 
 	return (
 		<>
-			<header className={styles.slideContainer} style={{height: height}} >
+			<header className={styles.slideContainer} >
 				<AnimatePresence initial={false} custom={direction} >
 					<motion.img
 						key={page}
@@ -73,8 +70,7 @@ const Slide = (): JSX.Element => {
 							}
 						}}
 						className={styles.imgStyle}
-						id="imgSlide"
-						ref={imgRef}
+						
 					/>
 				</AnimatePresence>
 				<div className={styles.paginateNextPrev}>
