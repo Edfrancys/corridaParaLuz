@@ -4,6 +4,7 @@ import { motion, useCycle} from 'framer-motion';
 import { useDimensions } from '../referencia/dimencions';
 import { MenuToggle } from './MenuToggle';
 import { Navigation } from './Navigation';
+import styles from '../../styles/components/Sidebar.module.css';
 
 const sideBar = {
 	open: (height = 1000) => ({		
@@ -69,9 +70,11 @@ const Sidebar = () => {
 
 			custom={height}
 			ref={containerRef}
+
+			className={styles.nav}
 		>
 			<motion.div
-				className='background'
+				className={styles.background}
 				variants={sideBar}
 			/>
 			<Navigation />
