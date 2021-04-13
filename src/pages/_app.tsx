@@ -3,6 +3,12 @@ import type { AppProps } from 'next/app';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+    
+    :root {
+      --primary: #ffd951;
+      --secondary: #2e2830;
+      --white: #ececec;
+    }
     * {
         margin: 0;
         padding: 0;
@@ -10,17 +16,15 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {    
-        background: #ffd951;
+        background: #fafafa;
     }
 
     /* Motion Framer Menu Css */
 
     nav {
-        position: absolute;
+        position: fixed;
         top: 0;
-        left: 0;
-        bottom: 0;
-        width: 300px;
+        left: 0;        
         z-index: 100;
     }
 
@@ -33,77 +37,77 @@ const GlobalStyle = createGlobalStyle`
         background: #fff;
     }
 
-button {
-  outline: none;
-  border: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  cursor: pointer;
-  position: absolute;
-  top: 18px;
-  left: 15px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: transparent;
-}
+	button {
+		outline: none;
+		border: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		cursor: pointer;
+		position: absolute;
+		top: 18px;
+		left: 15px;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: transparent;
+	}
 
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
+	ul,
+	li {
+		margin: 0;
+		padding: 0;
+	}
 
-ul {
-  padding: 25px;
-  position: absolute;
-  top: 100px;
-  width: 230px;
-}
+	ul {
+		padding: 25px;
+		position: absolute;
+		top: 100px;
+		width: 230px;
+	}
 
-li {
-  list-style: none;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
+	li {
+		list-style: none;
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+	}
 
-.icon-placeholder {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  flex: 40px 0;
-  margin-right: 20px;
-}
+	.icon-placeholder {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		flex: 40px 0;
+		margin-right: 20px;
+	}
 
-.text-placeholder {
-  border-radius: 5px;
-  width: 200px;
-  height: 20px;
-  flex: 1;
-}
+	.text-placeholder {
+		border-radius: 5px;
+		width: 200px;
+		height: 20px;
+		flex: 1;
+	}
 
-.refresh {
-  padding: 10px;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  width: 20px;
-  height: 20px;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-`;
+	.refresh {
+		padding: 10px;
+		position: absolute;
+		background: rgba(0, 0, 0, 0.4);
+		border-radius: 10px;
+		width: 20px;
+		height: 20px;
+		top: 10px;
+		right: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+	`;
 
 const theme = {
 	colors: {
-		background: '#fafafa',
+		background: '#ececec',
 		primary: '#2e2830',
 		secondary: '#ffd951'
 	}

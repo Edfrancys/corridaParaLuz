@@ -6,22 +6,53 @@ import { MenuToggle } from './MenuToggle';
 import { Navigation } from './Navigation';
 
 const sideBar = {
-	open: (height = 1000) => ({
-		clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-		transition: {
+	open: (height = 1000) => ({		
+		width: 300,
+		height: '100vh',
+		clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,	
+		transition: {			
+			delay: 0.2,
 			type: 'spring',
 			stiffness: 20,
-			restDelta: 2
+			restDelta: 2,			
+			width: {
+				velocity: 0.1
+			},
+			height: {
+				velocity: 0.1
+			}
 		}
 	}),
 	closed: {
-		clipPath: 'circle( 30px at 40px 40px)',
+		width: 75,
+		height: 75,
+		clipPath: 'circle( 30px at 40px 40px)',	
+
 		transition: {
 			delay: 0.5,
 			type: 'spring',
 			stiffness: 400,
-			damping: 40
+			damping: 40,			
+			width: {
+				velocity: 0.03,
+				delay: 1
+			},
+			height: {
+				velocity: 0.03,
+				delay: 1
+			}
 		}
+	}
+};
+
+const navSidebar = {
+	open: {
+		width: 300,
+		height: '100vh',
+	},
+	close: {
+		width: 75,
+		height: 75,
 	}
 };
 
@@ -32,9 +63,10 @@ const Sidebar = () => {
 	const { height } = useDimensions( containerRef );
 
 	return (
-		<motion.nav
-			initial={false}
+		<motion.nav			
 			animate={isOpen ? 'open' : 'closed'}
+			variants={navSidebar}
+
 			custom={height}
 			ref={containerRef}
 		>

@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { images } from './Images';
 import { wrap } from 'popmotion';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import styles from '../../styles/components/Slide.module.css';
-import { useDimensions } from '../referencia/dimencions';
+
 
 const variants = {
 	enter: (direction: number) => {
@@ -32,11 +32,8 @@ const swipePower = (offset: number, velocity: number) => {
 	return Math.abs(offset) * velocity;
 };
 
-const Slide = (): JSX.Element => {
-
-	const imgRef = useRef(null);
-	const { height } = useDimensions( imgRef );	
-
+const Slide = (): JSX.Element => {	
+	
 	const [ [page, direction], setPage ] = useState([0,0]);
 	const imageIndex = wrap( 0, images.length, page );
 	
@@ -46,7 +43,7 @@ const Slide = (): JSX.Element => {
 
 	return (
 		<>
-			<header className={styles.slideContainer} style={{height: height}} >
+			<header className={styles.slideContainer}  >
 				<AnimatePresence initial={false} custom={direction} >
 					<motion.img
 						key={page}
@@ -72,9 +69,7 @@ const Slide = (): JSX.Element => {
 								paginate(-1);
 							}
 						}}
-						className={styles.imgStyle}
-						id="imgSlide"
-						ref={imgRef}
+						className={styles.imgStyle}											
 					/>
 				</AnimatePresence>
 				<div className={styles.paginateNextPrev}>
