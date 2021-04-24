@@ -9,7 +9,7 @@ import styles from '../../styles/components/Slide.module.css';
 const variants = {
 	enter: (direction: number) => {
 		return {
-			x:  direction > 0 ? 1000 : -1000,
+			x:  direction > 0 ? 2000 : -2000,
 			opacity: 0
 		};
 	},
@@ -18,10 +18,9 @@ const variants = {
 		x: 0,
 		opacity: 1
 	},
-	exit: (direction: number) => {
+	exit: () => {
 		return {
-			zIndex: 0,
-			x: direction < 0 ? 1000 : -1000,
+			zIndex: 0,			
 			opacity: 0
 		};
 	}
@@ -55,7 +54,7 @@ const Slide = (): JSX.Element => {
 						exit='exit'
 						transition={{
 							x: { type: 'spring', stiffness: 300, damping: 30 },
-							opacity: { duration: 0.3 }
+							opacity: { duration: 0.2 }
 						}}
 						drag='x'
 						dragConstraints={{ left: 0, right: 0 }}
