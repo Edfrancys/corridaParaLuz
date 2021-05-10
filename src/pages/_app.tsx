@@ -3,6 +3,8 @@ import type { AppProps } from 'next/app';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+
+    @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
     
     :root {
       --primary: #ffd951;
@@ -17,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {    
         background: #fafafa;
+        font-family: 'Play', sans-serif
     }    
 `;
 

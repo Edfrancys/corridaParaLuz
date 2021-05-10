@@ -1,0 +1,10 @@
+.containerCarousel{
+    display: flex;
+    width: fit-content;
+    background: var(--white);
+}
+
+.containerCarousel .img {
+    height: 200px;
+    width: 400px;
+}
